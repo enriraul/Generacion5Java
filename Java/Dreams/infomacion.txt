@@ -1,0 +1,86 @@
+Encapsulamiento
++ public
+- private
+# protected
+____ relacion
+-> dependencia
+1 ------ *
+
+
+/********************************************/
+Estructura Jerarquica de archivos
+- Carpeta proyecto
+    -db
+        -   dreams.sql
+        -   data.sql
+
+    -documentos
+        -   diagramas UML-clases
+        -   diagrama MER
+
+    -lib
+        -   paqueterias
+
+    -src
+        - 
+
+
+*************************************************************
+
+            Descripción del Modelo de clases
+
+*************************************************************
+Clase Dreams:
+    main()
+    -------------
+    IngresoSesion
+    ValidaProducto
+
+Clase Producto:
+    id_nombre
+    nombre
+    precio
+    categoria
+    stock
+    ---------------------
+    get-set
+    
+Clase Cliente:
+    id_cliente
+    nombre
+    correo
+    ---------------------
+    mostrarInformacion
+    get-set
+
+
+Clase Ventas:
+    id_venta
+    producto (clase Producto)
+    cantidad
+    cliente (clase Cliente)
+
+Clase Carrito:
+    ArrayList <ventas>
+    ----------------------
+    agregarElemento
+    quitarElemento
+    enlistarElemento
+
+Clase SQL:
+    url
+    user
+    password
+    --------------------------
+    ConectarDB
+    SELECT - 
+    INSERT - producto| cliente
+    UPDATE - 
+    DELETE
+
+
+*************************************************************
+
+            Descripción del Modelo Entidad Relación
+
+*************************************************************
