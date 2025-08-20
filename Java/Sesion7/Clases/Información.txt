@@ -1,0 +1,20 @@
+Clases concretas:
+Todas las clases se encuentran detallas "todas hacen algo"
+
+
+Clases Abstractas:
+Almenos un método es abstracto ("No tiene indicaciones")
+
+
+Clases Finales:
+Son clases concretas que no permiten la herencia, destinadas a 
+no ser modificadas y detallar los ultimos comportamientos
+
+
+Clases Internas:
+Clases que incorporan dentro de sí, una clase. Estas deben estar relacionadas
+
+
+Clases Anonimas
+Destinadas a ser creadas durante el tiempo de ejecución, utilizando Interfaces
+(Una interfaz es una clase donde todos sus métodos son abstractos)
