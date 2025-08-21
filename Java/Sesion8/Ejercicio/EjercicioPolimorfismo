@@ -1,0 +1,16 @@
+Ejercicio: Polimorfismo con Figuras Geométricas
+Instrucciones:
+
+Crea una clase abstracta llamada Figura que tenga un método abstracto calcularArea().
+
+Crea tres clases que hereden de Figura:
+
+Cuadrado (con atributo lado)
+
+Rectangulo (con atributos base y altura)
+
+Circulo (con atributo radio)
+
+Sobrescribe el método calcularArea() en cada clase para que calcule el área correspondiente.
+
+En el main, crea un arreglo de tipo Figura que contenga objetos de Cuadrado, Rectangulo y Circulo.
