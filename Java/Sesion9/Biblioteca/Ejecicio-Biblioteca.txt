@@ -1,0 +1,30 @@
+Biblioteca
+    Arraylist catalogo 
+
+    AgregarLibros
+    BuscarLibros
+    EnlistarLibros
+    RemoverLibros
+
+LibroExistencia
+    Libro
+    existencias
+
+Libro
+    ISBN (International standard book number)
+    titulo 
+    autor
+    editorial
+
+    set-get
+    MostrarInformacion
+
+
+Main 
+
+
+Estructuras Clases
+Arraylist
+Proceso lógico más complicado
+La incorporación de varias clases a la vez
+Menus interactivos - terminal
