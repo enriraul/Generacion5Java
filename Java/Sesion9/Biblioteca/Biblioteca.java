@@ -50,12 +50,55 @@ public class Biblioteca{
                 LibroExistencia libroExistencia_i = catalogo.get(i);
                 Libro libro_i = libroExistencia_i.getLibro();
                 String ISBN_i = libro_i.getISBM();
+                if (ISBN_i.equals(ISBN)) {
+                    index_libro = i;
+                    break;
+                }
             }
 
+        }
+        return index_libro;
+    }
+
+    public void MostrarInfoLibro (String ISBN){
+        int index_libro = BuscarLibro(ISBN);
+         //Arraylist vacia
+        if(index_libro == -2){ 
+            System.out.println("Actualmente no hay libros disponibles en el catálogo");
+        }
+        else if(index_libro == -1){ //No se encontró ningún elemento
+            System.out.println("El ISBN no coincide con algún elemento del catálogo");
+        }
+        else{ //Posición del libro
+            LibroExistencia libroExistencia = catalogo.get(index_libro);
+            libroExistencia.MostrarInformacion();
+        }
+    }
+
+    public void MostrarCatalogo(){
+        for (int i = 0; i < catalogo.size(); i++) {
+            LibroExistencia libroExistencia = catalogo.get(i);
+            libroExistencia.MostrarInformacion();
+            System.out.println("__________________________________________\n");
         }
 
     }
 
+    public void RemoverLibro(String ISBN){
+        int index_libro = BuscarLibro(ISBN);
+         //Arraylist vacia
+        if(index_libro == -2){ 
+            System.out.println("Actualmente no hay libros disponibles en el catálogo");
+        }
+        else if(index_libro == -1){ //No se encontró ningún elemento
+            System.out.println("El ISBN no coincide con algún elemento del catálogo");
+        }
+        else{ //Posición del libro
+            LibroExistencia libroExistencia = catalogo.get(index_libro);
+            System.out.println("El siguiente libro ha sido eliminado: ");
+            libroExistencia.MostrarInformacion();
+            this.catalogo.remove(index_libro);
 
-
+        }
+    }
 }
