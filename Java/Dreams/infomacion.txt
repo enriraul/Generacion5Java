@@ -37,7 +37,7 @@ Clase Dreams:
     ValidaProducto
 
 Clase Producto:
-    id_nombre
+    id_producto
     nombre
     precio
     categoria
@@ -84,3 +84,35 @@ Clase SQL:
             Descripción del Modelo Entidad Relación
 
 *************************************************************
+
+Tabla Cliente:
+    id_cliente: varchar(20)| serial| integer primary key,  
+    nombre_cliente TEXT | varchar(50)
+    correo_cliente  TEXT | varchar(30)
+
+Tabla Producto:
+    id_producto: varchar(20)| serial| integer primary key,
+    nombre_producto: TEXT | varchar(50)
+    precio_producto: REAL | NUMERICAL
+    categoria_producto: TEXT | varchar(50)
+    stock_producto: INTEGER| INT
+
+Tabla Venta:
+    id_venta: varchar(20)| serial| integer primary key,
+    cantidad_productos: INTEGER | INT
+    id_cliente: varchar(20)| serial| integer  REFERENCES Cliente(id_cliente)
+
+Tabla detalle_venta:
+    PRIMARY KEY(id_venta, id_producto)
+    cantidad: INTEGER| INT
+    subtotal: NUMERICAL | REAL
+    id_venta varchar(20)| serial| integer REFERENCES Venta(id_venta)
+    id_producto varchar(20)| serial| integer REFERENCES Producto(id_producto)
+
+
+Tabla Descuentos:
+    id_descuento:
+    fecha_inicio:
+    fecha_final:
+    descuento: 
+    id_producto:
