@@ -1,0 +1,44 @@
+Sistema de Estacionamiento de Vehículos
+El objetivo de este ejercicio es construir un sistema básico para gestionar 
+los vehículos estacionados en un lugar determinado.
+
+Instrucciones:
+
+Crear una clase base llamada Vehiculo que contenga:
+
+Atributos protegidos: marca, modelo, anio.
+
+Un método llamado mostrarInformacion() que imprima los datos del vehículo.
+
+Crear dos clases que hereden de Vehiculo:
+
+Auto
+
+Atributo adicional privado: numeroDePuertas.
+
+Debe redefinir el método mostrarInformacion() para mostrar también el número de puertas.
+
+Motocicleta
+
+Atributo adicional privado: tipoDeManillar.
+
+Debe redefinir el método mostrarInformacion() para mostrar también el tipo de manillar.
+
+
+Crear una clase llamada Estacionamiento:
+
+Deberá tener un atributo que almacene una lista de vehículos.
+
+Deberá incluir un método agregarVehiculo(Vehiculo vehiculo) para agregar un vehículo a la lista.
+
+Deberá incluir un método mostrarVehiculos() que recorra la lista e imprima la información de todos los vehículos estacionados.
+
+En el método main:
+
+Crear una instancia de Estacionamiento.
+
+Crear al menos un objeto de tipo Auto y uno de tipo Motocicleta, inicializándolos con sus respectivos datos.
+
+Agregar estos objetos al estacionamiento.
+
+Llamar al método mostrarVehiculos() para ver toda la información.
