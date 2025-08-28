@@ -2,8 +2,8 @@ public class Motocicleta extends Vehiculo{
     
     private String tipoManillar;
 
-    public Motocicleta(String marca, String modelo, int año, String tipoManillar){
-        super(marca, modelo, año);
+    public Motocicleta(String matricula,String marca, String modelo, int año, String tipoManillar){
+        super(matricula, marca, modelo, año);
         this.tipoManillar = tipoManillar;
     }
 

@@ -1,10 +1,12 @@
 public class Vehiculo{
 
+    protected String matricula;
     protected String marca;
     protected String modelo;
     protected int año;
 
-    public Vehiculo(String marca, String modelo, int año){
+    public Vehiculo(String matricula, String marca, String modelo, int año){
+        this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
