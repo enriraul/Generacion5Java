@@ -4,16 +4,18 @@ public class Main{
 
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
+        BibliotecaArchivos ba = new BibliotecaArchivos();
         Scanner sc = new Scanner(System.in);
         int seleccion;
         String Mensaje = """ 
         Bienvenido:
         Seleccione alguna de las siguientes opciones:
         1.- Agregar Libro
-        2.- Buscar Libro
-        3.- Mostrar catalogo completo
-        4.- Eliminar libro
-        5.- Cerrar aplicacion
+        2.- Cargar libros desde archivo
+        3.- Buscar Libro
+        4.- Mostrar catalogo completo
+        5.- Eliminar libro
+        6.- Cerrar aplicacion
         """;
 
         do { 
@@ -40,23 +42,29 @@ public class Main{
                     break;
                 case 2:
                     sc.nextLine();
+                    System.out.println("Especifique el nombre del archivo: ");
+                    String PathFile = sc.nextLine();
+                    ba.CargarLibros(PathFile, biblioteca);
+                    break;    
+                case 3:
+                    sc.nextLine();
                     System.out.println("Complete la siguiente información");
                     System.out.println("Indique el ISBN: ");
                     String isbn_busqueda = sc.nextLine();
                     biblioteca.MostrarInfoLibro(isbn_busqueda);
                     break;
-                case 3:
+                case 4:
                     System.out.println("Catalogo: ");
                     biblioteca.MostrarCatalogo();
                     break;
-                case 4:
+                case 5:
                     sc.nextLine();
                     System.out.println("Complete la siguiente información");
                     System.out.println("Indique el ISBN: ");
                     String isbn_remover = sc.nextLine();
                     biblioteca.RemoverLibro(isbn_remover);
                     break;
-                case 5:
+                case 6:
                     System.out.println("Muchas gracias, hasta pronto.");
                     break;
                 default:
