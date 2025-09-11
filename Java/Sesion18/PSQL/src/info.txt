@@ -1,0 +1,19 @@
+Cambios por ajustar
+Docker/docker-compose.yml
+
+agregar en 
+db: 
+    enviroment:
+        POSTGRES_DB: dbtest
+    ports:
+      - "5433:5432"
+
+docker compose down -v
+docker compose up
+
+
+
+Get-Content .\data.sql | docker exec -i postgres-clase psql -U admin -d dbtest
+
+ psql -h localhost -p 5433 -U admin -d dbtest
+psswd: root

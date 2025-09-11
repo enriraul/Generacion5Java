@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class ActualizarUsuario{
     public static void main(String[] args) {
-        String url = "jdbc:postgresql://localhost:5432/dbtest";
+        String url = "jdbc:postgresql://localhost:5433/dbtest";
         String usuario = "admin";
         String password = "root";
         try {

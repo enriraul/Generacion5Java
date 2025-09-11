@@ -1,9 +1,10 @@
 import java.sql.*;
-//java -cp "bin;lib/postgresql-42.7.5.jar" ConsultarUsuario
+//javac -cp "bin;lib/postgresql-42.7.5.jar" -d bin src/ConsultarUsuario
+//java -cp "bin;lib/postgresql-42.7.5.jar" src/ConsultarUsuario
 public class ConsultarUsuario{
 
     public static void main(String[] args) {
-        String url = "jdbc:postgresql://localhost:5432/dbtest";
+        String url = "jdbc:postgresql://localhost:5433/dbtest";
         String usuario = "admin";
         String password = "root";
 
