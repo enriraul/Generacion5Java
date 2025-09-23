@@ -48,7 +48,7 @@ Clase Producto:
 Clase Cliente:
     id_cliente
     nombre
-    correo
+    correo   pk
     ---------------------
     mostrarInformacion
     get-set
@@ -116,3 +116,20 @@ Tabla Descuentos:
     fecha_final:
     descuento: 
     id_producto:
+
+nombre, correo
+
+id_producto nombre_producto cantidad precio_subtotal
+
+
+
+total 
+
+
+Reporte
+
+-Planteamiento del problema
+-Identificación/Reconocimiento de clases: atributos y métodos. 
+-UML de clases
+-Metodología y Resultados: Descripción breve y Resultados (capturas de pantalla)
+-Conclusión. 
