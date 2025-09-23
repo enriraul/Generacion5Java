@@ -8,5 +8,18 @@ public class Venta{
         this.cantidad = cantidad;
     }
 
+    public int getIdVenta(){
+        return this.id_venta;
+    }
+    public Producto getProducto(){
+        return this.producto;
+    }
 
+    public int getCantidad(){
+        return this.cantidad;
+    }
+
+    public void setCantidad(int cantidad){
+        this.cantidad = cantidad;
+    }
 }

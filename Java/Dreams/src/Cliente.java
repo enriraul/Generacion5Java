@@ -29,5 +29,8 @@ public class Cliente{
         return this.nombre;
     }
 
+    public String getCorreo(){
+        return this.correo;
+    }
 
 }

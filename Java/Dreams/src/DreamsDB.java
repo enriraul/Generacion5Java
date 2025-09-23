@@ -1,9 +1,9 @@
 import java.sql.*;
 
 public class DreamsDB{
-    private String url;
-    private String usuario;
-    private String contraseña;
+    private String url = "jdbc:postgresql://localhost:5433/dbtest";
+    private String usuario = "admin";
+    private String contraseña = "root";
     private Connection conn;
 
     //contructor establece la conexión a la db
@@ -21,6 +21,7 @@ public class DreamsDB{
             String consulta = "SELECT * from producto";
             try (Statement stmt = this.conn.createStatement()){
                 ResultSet rs = stmt.executeQuery(consulta);
+                
                 String mensaje = """
                     =======================================
 
@@ -30,7 +31,7 @@ public class DreamsDB{
                     id_producto\t\t|nombre\t\t|precio\t\t|categoria\t\t| stock\t\t
                     
                     """;
-                    System.out.println(mensaje);
+                System.out.println(mensaje);
                 while (rs.next()) { 
                     int id_producto = rs.getInt("id_producto");
                     String nombre = rs.getString("nombre_producto");
@@ -84,3 +85,5 @@ public class DreamsDB{
     }
 
 }
+
+

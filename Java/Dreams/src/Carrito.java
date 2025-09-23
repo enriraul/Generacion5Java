@@ -10,7 +10,7 @@ public class Carrito{
     }
 
     public void AgregarCarrito(Producto producto, int cantidad){
-        if(producto.stock => cantidad){
+        if(producto.getStock() >= cantidad){
             Venta venta = new Venta(producto, cantidad);
             carrito.add(venta);
         }
@@ -27,7 +27,7 @@ public class Carrito{
         else{
             for (int i = 0; i < carrito.size(); i++) {
                 Venta venta_i = carrito.get(i);
-                if (venta_id = venta_i.getIdVenta()){
+                if (venta_id == venta_i.getIdVenta()){
                     id_producto = i;
                 }            
             }
@@ -38,7 +38,7 @@ public class Carrito{
     public void QuitarCarrito(int venta_id, int cantidad){
         int id_venta = BuscarElemento(venta_id);
         Venta venta = carrito.get(id_venta);
-        if (catidad > venta.getCantidad()) {
+        if (cantidad > venta.getCantidad()) {
             //Mandamos mensaje de incongruencia
         }
         else if (cantidad < venta.getCantidad()) {
