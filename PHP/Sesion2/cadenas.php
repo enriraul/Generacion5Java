@@ -1,6 +1,6 @@
 <?php
 // =============================
-// 🧵 Cadenas de texto en PHP
+// Cadenas de texto en PHP
 // =============================
 
 // Concatenación

@@ -1,6 +1,6 @@
 <?php
 // =============================
-// 🧱 Arrays en PHP
+// Arrays en PHP
 // =============================
 
 // Recorriendo con foreach
